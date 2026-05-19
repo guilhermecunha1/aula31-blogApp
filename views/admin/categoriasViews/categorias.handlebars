@@ -1,0 +1,32 @@
+
+<h2>Lista de Categorias <i class="bi bi-journal-text"></i></h2>
+<br>
+<a href="/admin/categorias/add"><button class="btn btn-outline-primary" >Adicionar Categorias</button></a>
+<a href="/admin/categorias/exc"><button class="btn btn-outline-primary" >Excluir Categorias</button></a>
+<hr>
+
+    <div class="container mt-4">
+        <div class="row">
+            {{#each categorias}}
+                <div class="col-md-6 mb-4">
+                    <div class="card border-info shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">{{nome}}</h4>
+                            <small class="text-muted d-block">{{slug}}</small>
+                            <small class="text-secondary data-formatada d-block">{{date}}</small>
+                            <br>
+                            <a href="/admin/categorias/edit/{{_id}}"><button class="btn-edit-custom">Editar Categoria</button> </a>              
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <p class="mt-3">Nenhuma categoria encontrada.</p>
+            {{/each}}
+        </div>
+    </div>
+
+
+
+
+
+

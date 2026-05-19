@@ -1,0 +1,21 @@
+    
+<h2>Lista de Categorias <i class="bi bi-journal-text"></i></h2>
+<hr>
+    
+    <div class="container mt-4">
+        <div class="row">
+            {{#each categorias}}
+                <div class="col-md-6 mb-4">
+                    <div class="card border-info shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">{{nome}}</h4>
+                            <small class="text-muted d-block">{{slug}}</small>
+                            <small class="text-secondary data-formatada d-block">{{date}}</small>         
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <p class="mt-3">Nenhuma categoria encontrada.</p>
+            {{/each}}
+        </div>
+    </div>

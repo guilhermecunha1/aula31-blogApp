@@ -1,0 +1,16 @@
+{{> _erros}}
+
+<h2>Adicionar Categorias <i class="bi bi-file-earmark-plus-fill"></i></h2>
+<div class="card">
+    <div class="card-body">
+
+        <form action="/admin/categorias/nova" method="post">
+            <label for="nome" class="mt-2">Nome: </label>
+              <input type="text" name="nome" id="nome" placeholder="Nome da Categoria" class="form-control mt-3">
+            <label for="slug" class="mt-2">Slug</label>
+                <input type="text" name="slug" id="slug" placeholder="Slug da Categoria" class="form-control mt-3">
+            <button  type="submit" class="btn btn-outline-primary mt-3">Confirmar</button>
+        </form>
+        
+    </div>
+</div>

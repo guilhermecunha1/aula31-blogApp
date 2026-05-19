@@ -1,0 +1,23 @@
+{{> _erros}}
+
+<h2>Editar Categorias <i class="bi bi-pencil"></i></h2>
+<hr>
+<div class="card mt-4">
+    <div class="card-body">
+
+        <form action="/admin/categorias/edit" method="post">
+
+
+            {{!-- Campo oculto para passar o ID da categoria a ser editada --}}
+            <input type="hidden" name="id" value="{{categoria._id}}">
+            
+            <label for="nome" class="mt-2">Nome:</label>
+              <input type="text" name="nome" id="nome" placeholder="Nome da Categoria" value="{{categoria.nome}}" class="form-control mt-3">
+
+            <label for="slug" class="mt-2">Slug</label>
+                <input type="text" name="slug" id="slug" placeholder="Slug da Categoria" value="{{categoria.slug}}" class="form-control mt-3">
+            <button  type="submit" class="btn btn-outline-primary mt-3">Confirmar</button>
+        </form>
+        
+    </div>
+</div>

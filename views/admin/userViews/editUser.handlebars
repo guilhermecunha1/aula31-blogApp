@@ -1,0 +1,25 @@
+{{>_erros}}
+<a href="/admin/users"><button class="btn-custom w-40">Voltar</button></a>
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+
+  <div class="card auth-card shadow-lg p-4">
+
+    <h3 class="text-center mb-2">Editar Usuario</h3>
+    <p class="text-center text-white mb-4">Preencha os dados abaixo</p>
+
+    <form action="/admin/users/edit" method="POST">
+    <input type="hidden" name="id" value="{{user._id}}">
+
+      <div class="mb-3">
+        <input type="text" name="nome" class="form-control" placeholder="Nome" value="{{user.nome}}" >
+      </div>
+
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Email" value="{{user.email}}">
+      </div>
+
+      <button type="submit" class="btn-custom w-100 mx-auto d-block mb-3">Cadastrar</button>
+    </form>
+  </div>
+</div>

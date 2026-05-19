@@ -1,0 +1,36 @@
+
+
+ <a href="/" class="btn-custom back-btn">Voltar</a>
+
+
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card auth-card shadow-lg p-4">
+
+
+    <h3 class="text-center mb-2">Login</h3>
+    <p class="text-center text-white mb-4">Preencha os dados abaixo</p>
+
+    <form action="/users/login" method="POST">
+
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Email" value="{{oldInput.email}}">
+      </div>
+
+      <div class="mb-3">
+        <input type="password" name="senha" class="form-control"  placeholder="Senha">
+      </div>
+      <hr>
+
+      <button type="submit" class="btn-custom w-100 mx-auto d-block mb-3">Entrar</button>
+    </form>
+    <small class="text-center"> Não possui uma conta ?</small>
+    <a href="/users/registro"><button class="btn-custom w-100 mx-auto d-block mt-2 mb-3">Criar uma conta</button></a>
+
+  <div class="auth-messages">
+    {{>_erros}}
+    {{>_error}}
+  </div>
+  
+  </div>
+</div>

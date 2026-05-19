@@ -1,0 +1,109 @@
+body {
+  min-height: 100vh;
+
+  background-image: url('/img/mesh6.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* card customizado (Bootstrap + override) */
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 2rem;
+
+  border-radius: 16px;
+  background-color: #1e293b;
+  color: #e5e7eb;
+
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+}
+
+.auth-messages{
+    min-height: 70px;
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* inputs mais bonitos no dark */
+.form-control {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.form-control:focus {
+  background-color: #0f172a;
+  color: #fff;
+  border-color: #3b82f6;
+  box-shadow: none;
+}
+.form-text{
+  text-align: center;
+  color: white;
+}
+
+.btn-custom {
+      display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  background-color: #172554;
+
+  color: #e5e7eb;
+  font-weight: 500;
+  text-decoration: none;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* hover */
+.btn-custom:hover {
+  background-color: #1e3a8a;
+
+  border-color: rgba(96,165,250,0.25);
+
+  transform: translateY(-1px);
+}
+
+/* clique */
+.btn-custom:active {
+  transform: scale(0.98);
+}
+
+/* foco (acessibilidade) */
+.btn-custom:focus {
+  outline: none;
+
+  border-color: rgba(96,165,250,0.45);
+}
+
+
+/* link */
+a {
+  color: #13247c;
+  text-decoration: none;
+}

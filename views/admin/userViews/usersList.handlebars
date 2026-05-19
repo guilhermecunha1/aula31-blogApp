@@ -1,0 +1,105 @@
+
+<h2> <i class="bi bi-people-fill"></i> Lista de usuarios: </h2>
+<div class="container mt-4">
+
+  <div class="card border-0 shadow">
+
+    <div class="card-header d-flex justify-content-between align-items-center"
+     style="background-color: #274690; color: #f3f1ef;">
+      
+    <h4 class="mb-0">Usuários cadastrados</h4>
+    </div> 
+
+    <div class="card-body p-0">
+
+      <table class="table table-hover align-middle mb-0">
+
+        <thead class="table-light">
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cargo</th>
+            <th class="text-center">Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          {{#each users}}
+            <tr>
+
+              <td>
+                <strong>{{nome}}</strong>
+              </td>
+
+              <td>
+                {{email}}
+              </td>
+
+              <td>
+
+                {{#if isAdmin}}
+
+                  <span class="role-badge admin">
+                    Admin
+                  </span>
+
+                  <a href="/admin/users/toggleAdmin/{{_id}}" 
+                    onclick="return confirm('Tem certeza que deseja modificar o cargo desse usuario ?')"
+                    class="action-badge remove">
+                      Remover Cargo
+                  </a>
+
+                {{else}}
+
+                  <span class="role-badge user">
+                    Usuário
+                  </span>
+
+                  <a href="/admin/users/toggleAdmin/{{_id}}" 
+                    onclick="return confirm('Tem certeza que deseja modificar o cargo desse usuario ?')"
+                    class="action-badge add">
+                      Tornar Admin
+                  </a>
+
+              {{/if}}
+
+              </td>
+
+              <td class="text-center space-beetwen">
+
+                <a href="/admin/users/edit/{{_id}}">
+                  <button class="btn btn me-2" style="background-color: #274690; color: #f3f1ef;">
+                    Editar
+                  </button>
+                </a>
+                
+                <a href="/admin/users/delete/{{_id}}">
+                  <button class="btn btn ms-2" style="background-color: #ece5df ; color: #274690;">
+                    Excluir
+                  </button>
+                </a>
+
+              </td>
+
+            </tr>
+
+          {{else}}
+
+            <tr>
+              <td colspan="4" class="text-center py-4">
+                Nenhum usuário encontrado.
+              </td>
+            </tr>
+
+          {{/each}}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

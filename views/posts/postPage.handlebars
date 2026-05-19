@@ -1,0 +1,34 @@
+<div class="container mt-4">
+
+  <div class="card shadow-sm border-0">
+    
+    <div class="card-body">
+
+      <!-- TÍTULO -->
+      <h1 class="card-title mb-3">{{post.titulo}}</h1>
+
+      <!-- META -->
+      <p class="text-muted mb-2">
+        Categoria: <strong>{{post.categoria.nome}}</strong>
+      </p>
+      <small class="text-secondary data-formatada d-block mb-3">
+        Publicado em: {{post.date}}
+      </small>
+
+      <hr>
+
+      <!-- DESCRIÇÃO -->
+      <p class="lead">
+        {{post.descricao}}
+      </p>
+
+      <!-- CONTEÚDO -->
+      <div class="mt-4">
+        {{{post.conteudo}}}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

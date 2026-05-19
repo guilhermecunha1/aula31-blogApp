@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg shadow-sm fixed-top" style="background-color: #23283f;">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold text-white" href="/">MeuBlog</a>
+
+    <!-- Botão mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Conteúdo -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/">Início</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/posts">Posts</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/categorias">Categorias</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/admin">Admin</a>
+        </li>
+
+        <!-- Botão -->
+        {{#if user}}
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-light fw-semibold" href="/users/logout">
+            Desconectar-se
+          </a>
+        </li>
+        {{else}}
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-outline-light fw-semibold" href="/users/registro">
+            Cadastrar-se
+          </a>
+          <a class="btn btn-light fw-semibold" href="/users/login">
+            Entrar
+          </a>
+        </li>
+        {{/if}}
+      </ul>
+
+    </div>
+  </div>
+</nav>

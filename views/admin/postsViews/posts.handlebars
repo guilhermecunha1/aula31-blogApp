@@ -1,0 +1,47 @@
+<h2>Lista de Posts <i class="bi bi-journal-text"></i></h2>
+<br>
+
+<a href="/admin/posts/add">
+  <button class="btn btn-outline-primary">Adicionar Post</button>
+</a>
+
+<hr>
+
+<div class="container mt-4">
+  <div class="row">
+    {{#each posts}}
+      <div class="col-md-6 mb-4">
+        <div class="card border-info shadow-sm h-100">
+          <div class="card-body">
+
+            <h4 class="card-title mb-1">{{titulo}}</h4>
+
+            <small class="text-muted d-block mb-2">
+              Slug: {{slug}}
+            </small>
+
+            <small class="text-secondary data-formatada d-block mb-3">
+              Publicado em: {{date}}
+            </small>
+
+            <p class="mt-2 mb-3">
+              {{descricao}}
+            </p>
+
+            <hr>
+
+            <small class="text-muted">
+              <strong>Categoria:</strong>
+                {{categoria.nome}}
+            </small>
+            <br>
+            <a href="/admin/posts/edit/{{_id}}"><button class="btn-edit-custom mt-3">Editar</button></a>
+            <a href="/admin/posts/exc/{{_id}}"><button class="btn-delete-custom">Excluir</button></a>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <p class="mt-3">Nenhum post encontrado.</p>
+    {{/each}}
+  </div>
+</div>
