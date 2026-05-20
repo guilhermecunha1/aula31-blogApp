@@ -54,7 +54,8 @@ router.post("/cadastro", async (req, res) => {
             const salt = await bcrypt.genSalt(10)
             const hash = await bcrypt.hash(senha, salt)
 
-            await User.create({nome, email, senha: hash,})
+            await User.create({nome, email, senha: hash, isAdmin: email === "guilherme.cunhaescobar@gmail.com" ? 1 : 0})
+            
             req.session.flash = {
                 type: 'alert-success',
                 msg: 'Usuario criado com sucesso'
