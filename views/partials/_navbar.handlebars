@@ -24,12 +24,13 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="/categorias">Categorias</a>
+          <a class="nav-link text-white" href="/categorias">Categoriaas</a>
         </li>
         {{#if user.isAdmin}}
         <li class="nav-item">
           <a class="nav-link text-white" href="/admin">Admin</a>
         </li>
+        {{else}}
         {{/if}}
 
         {{#if user}}
