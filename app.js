@@ -56,7 +56,7 @@ require('dotenv').config()
 
         // Envia para as views se o usuário logado é admin,
         // porque o Handlebars não acessa req.user diretamente
-        res.locals.isAdmin = req.user && req.user.isAdmin == 1
+        //res.locals.isAdmin = req.user && req.user.isAdmin == 1
         
         req.session.flash = null
         req.session.oldInput = null
