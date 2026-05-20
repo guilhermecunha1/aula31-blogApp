@@ -53,6 +53,10 @@ require('dotenv').config()
         //jeito correto com connect flash - Login
         res.locals.error = req.flash("error")
         res.locals.user = req.user || null
+
+        // Envia para as views se o usuário logado é admin,
+        // porque o Handlebars não acessa req.user diretamente
+        res.locals.isAdmin = req.user && req.user.isAdmin == 1
         
         req.session.flash = null
         req.session.oldInput = null
